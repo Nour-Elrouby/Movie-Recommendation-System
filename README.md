@@ -1,15 +1,15 @@
-# 🎬 Movie Recommendation System
+# Movie Recommendation System
 
-![Python](https://img.shields.io/badge/Python-3.10-blue)
-![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange)
-![scikit-learn](https://img.shields.io/badge/ML-scikit--learn-F7931E)
-![Dataset](https://img.shields.io/badge/Dataset-10%2C000%20Movies-brightgreen)
+![Python](https://img.shields.io/badge/Python-3.10-306998?style=flat-square&logo=python&logoColor=white&labelColor=1F2937)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-8E44AD?style=flat-square&logo=jupyter&logoColor=white&labelColor=1F2937)
+![scikit-learn](https://img.shields.io/badge/ML-scikit--learn-00897B?style=flat-square&logo=scikitlearn&logoColor=white&labelColor=1F2937)
+![Dataset](https://img.shields.io/badge/Dataset-10%2C000%20Movies-C62828?style=flat-square&logo=themoviedatabase&logoColor=white&labelColor=1F2937)
 
-> A content-based movie recommendation system that analyzes genres and plot descriptions to find similar movies — built with Python, scikit-learn, and cosine similarity.
+> A content-based movie recommendation system that analyzes genres and plot descriptions to find similar movies — built with Python,scikit-learn, and cosine similarity.
 
 ---
 
-## 📖 About the Project
+## About the Project
 
 This project builds a **content-based recommendation system** from a dataset of 10,000 movies. It recommends titles with similar themes by analyzing each movie's genres and overview.
 
@@ -23,7 +23,7 @@ Instead of relying on user ratings or viewing history, the system:
 
 ---
 
-## ✨ Features
+## Features
 
 | Feature | Description |
 |---|---|
@@ -38,7 +38,7 @@ Instead of relying on user ratings or viewing history, the system:
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |---|---|
@@ -52,7 +52,7 @@ Instead of relying on user ratings or viewing history, the system:
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 Movie-Recommendation-System/
@@ -65,7 +65,7 @@ Movie-Recommendation-System/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -118,7 +118,7 @@ Open `Movie_Recommendation.ipynb` and run the cells from top to bottom.
 
 ---
 
-## 🧠 How It Works — Recommendation Pipeline
+## How It Works — Recommendation Pipeline
 
 The system follows a simple content-based recommendation workflow:
 
@@ -154,7 +154,7 @@ Display the top 5 related movies
 
 ---
 
-## 💻 Usage
+## Usage
 
 After running the notebook cells, pass a movie title to the recommendation function:
 
@@ -166,7 +166,7 @@ The function displays the five highest-ranked recommendations.
 
 ---
 
-## 📦 Dataset
+## Dataset
 
 The dataset contains **10,000 movie records** and nine original features:
 
@@ -184,7 +184,7 @@ The dataset contains **10,000 movie records** and nine original features:
 
 ---
 
-## 📈 Notebook Sections
+## Notebook Sections
 
 The notebook is organized into the following stages:
 
@@ -200,7 +200,7 @@ The notebook is organized into the following stages:
 
 ---
 
-## 🔮 Future Improvements
+## Future Improvements
 
 - Use TF-IDF to reduce the influence of common words
 - Add cast, director, keywords, and production information
@@ -208,11 +208,3 @@ The notebook is organized into the following stages:
 - Build a hybrid system with collaborative filtering
 - Evaluate recommendations with ranking metrics
 - Deploy the model as an interactive web application
-
----
-
-## 👤 Author
-
-**Nour El-Rouby**
-
-- GitHub: [@Nour-Elrouby](https://github.com/Nour-Elrouby)
