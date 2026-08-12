@@ -5,7 +5,7 @@
 ![scikit-learn](https://img.shields.io/badge/ML-scikit--learn-00897B?style=flat-square&logo=scikitlearn&logoColor=white&labelColor=1F2937)
 ![Dataset](https://img.shields.io/badge/Dataset-10%2C000%20Movies-C62828?style=flat-square&logo=themoviedatabase&logoColor=white&labelColor=1F2937)
 
-> A content-based movie recommendation system that analyzes genres and plot descriptions to find similar movies — built with Python, scikit-learn, and cosine similarity.
+> A content-based movie recommendation system that analyzes genres and plot descriptions to find similar movies  built with Python, scikit-learn, and cosine similarity.
 
 ---
 
@@ -22,7 +22,7 @@ Instead of relying on user ratings or viewing history, the system:
 - Visualizes the dataset and recommendation scores inside the notebook
 
 > [!IMPORTANT]
-> Recommendations measure similarity in genres and plot language—not predicted enjoyment or movie quality. Use the results as discovery suggestions and consider ratings, reviews, and personal preferences separately.
+> Recommendations measure similarity in genres and plot language-not predicted enjoyment or movie quality. Use the results as discovery suggestions and consider ratings,reviews, and personal preferences separately.
 
 ---
 
