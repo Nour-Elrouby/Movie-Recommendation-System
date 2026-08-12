@@ -5,7 +5,7 @@
 ![scikit-learn](https://img.shields.io/badge/ML-scikit--learn-00897B?style=flat-square&logo=scikitlearn&logoColor=white&labelColor=1F2937)
 ![Dataset](https://img.shields.io/badge/Dataset-10%2C000%20Movies-C62828?style=flat-square&logo=themoviedatabase&logoColor=white&labelColor=1F2937)
 
-> A content-based movie recommendation system that analyzes genres and plot descriptions to find similar movies — built with Python,scikit-learn, and cosine similarity.
+> A content-based movie recommendation system that analyzes genres and plot descriptions to find similar movies — built with Python, scikit-learn, and cosine similarity.
 
 ---
 
@@ -21,20 +21,23 @@ Instead of relying on user ratings or viewing history, the system:
 - Ranks the closest matches and returns movie recommendations
 - Visualizes the dataset and recommendation scores inside the notebook
 
+> [!IMPORTANT]
+> Recommendations measure similarity in genres and plot language—not predicted enjoyment or movie quality. Use the results as discovery suggestions and consider ratings, reviews, and personal preferences separately.
+
 ---
 
 ## Features
 
 | Feature | Description |
 |---|---|
-| 📊 Data Exploration | Examines movie columns, data types, missing values, and sample records |
-| 🎭 Genre Analysis | Shows the most common genres in the catalogue |
-| ⭐ Rating Analysis | Visualizes the distribution of average movie ratings |
-| 📅 Release Trends | Displays how the number of movie releases changes over time |
-| 🧹 Text Preparation | Combines genres and overviews into a single `tags` feature |
-| 🔢 Feature Extraction | Creates up to 10,000 text features with `CountVectorizer` |
-| 🧭 Similarity Engine | Compares movie vectors using cosine similarity |
-| 🎯 Recommendations | Ranks and displays the most similar movie titles |
+|  Data Exploration | Examines movie columns, data types, missing values, and sample records |
+|  Genre Analysis | Shows the most common genres in the catalogue |
+|  Rating Analysis | Visualizes the distribution of average movie ratings |
+|  Release Trends | Displays how the number of movie releases changes over time |
+|  Text Preparation | Combines genres and overviews into a single `tags` feature |
+|  Feature Extraction | Creates up to 10,000 text features with `CountVectorizer` |
+|  Similarity Engine | Compares movie vectors using cosine similarity |
+|  Recommendations | Ranks and displays the most similar movie titles |
 
 ---
 
