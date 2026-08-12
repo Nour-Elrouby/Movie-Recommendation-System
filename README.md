@@ -1,205 +1,218 @@
-<div align="center">
+# 🎬 Movie Recommendation System
 
-# Movie Recommendation System
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange)
+![scikit-learn](https://img.shields.io/badge/ML-scikit--learn-F7931E)
+![Dataset](https://img.shields.io/badge/Dataset-10%2C000%20Movies-brightgreen)
 
-### Discover movies through content-based similarity
-
-A machine-learning project that recommends related movies by analyzing their genres and plot descriptions with natural language processing.
-
-[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
-[![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter&logoColor=white)](https://jupyter.org/)
-[![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-F7931E?logo=scikitlearn&logoColor=white)](https://scikit-learn.org/)
-[![pandas](https://img.shields.io/badge/pandas-Data%20Analysis-150458?logo=pandas&logoColor=white)](https://pandas.pydata.org/)
-
-[Explore the notebook](Movie_Recommendation.ipynb) · [View the dataset](dataset.csv)
-
-</div>
+> A content-based movie recommendation system that analyzes genres and plot descriptions to find similar movies — built with Python, scikit-learn, and cosine similarity.
 
 ---
 
-## Overview
+## 📖 About the Project
 
-The Movie Recommendation System is a content-based filtering project developed in Python. It represents each movie using its genre and overview, transforms that text into numerical features, and compares movies using cosine similarity.
+This project builds a **content-based recommendation system** from a dataset of 10,000 movies. It recommends titles with similar themes by analyzing each movie's genres and overview.
 
-The project is presented as a documented Jupyter Notebook that covers data understanding, exploratory analysis, preprocessing, feature extraction, similarity calculation, recommendation generation, and result visualization.
+Instead of relying on user ratings or viewing history, the system:
 
-## Key features
+- Combines movie genres and plot descriptions into one text feature
+- Converts text into numerical vectors using `CountVectorizer`
+- Measures the similarity between movies using cosine similarity
+- Ranks the closest matches and returns movie recommendations
+- Visualizes the dataset and recommendation scores inside the notebook
 
-- Analyzes a catalogue of **10,000 movies**.
-- Explores genre, rating, and release-year distributions.
-- Combines genres and plot overviews into a unified text feature.
-- Extracts up to **10,000 textual features** with `CountVectorizer`.
-- Ranks related movies with cosine similarity.
-- Visualizes the strongest recommendation matches.
-- Keeps the full workflow transparent and reproducible in one notebook.
+---
 
-## Recommendation workflow
+## ✨ Features
 
-```mermaid
-flowchart LR
-    A[Movie dataset] --> B[Data exploration]
-    B --> C[Combine genre and overview]
-    C --> D[Count vectorization]
-    D --> E[Cosine similarity]
-    E --> F[Rank similar movies]
-    F --> G[Recommendations]
+| Feature | Description |
+|---|---|
+| 📊 Data Exploration | Examines movie columns, data types, missing values, and sample records |
+| 🎭 Genre Analysis | Shows the most common genres in the catalogue |
+| ⭐ Rating Analysis | Visualizes the distribution of average movie ratings |
+| 📅 Release Trends | Displays how the number of movie releases changes over time |
+| 🧹 Text Preparation | Combines genres and overviews into a single `tags` feature |
+| 🔢 Feature Extraction | Creates up to 10,000 text features with `CountVectorizer` |
+| 🧭 Similarity Engine | Compares movie vectors using cosine similarity |
+| 🎯 Recommendations | Ranks and displays the most similar movie titles |
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Language | Python 3.10 |
+| Data Analysis | pandas + NumPy |
+| Machine Learning | scikit-learn |
+| Text Processing | CountVectorizer |
+| Similarity Metric | Cosine Similarity |
+| Visualization | Matplotlib |
+| Development | Jupyter Notebook |
+
+---
+
+## 📁 Project Structure
+
+```text
+Movie-Recommendation-System/
+│
+├── Movie_Recommendation.ipynb   ← Complete analysis and recommendation workflow
+├── dataset.csv                  ← Movie metadata for 10,000 titles
+├── README.md                    ← Project documentation
+└── .gitignore                   ← Files excluded from version control
 ```
 
-### 1. Content representation
+---
 
-The `genre` and `overview` columns are combined into a new feature named `tags`. This gives the model a textual representation of each movie's themes and story.
-
-### 2. Feature extraction
-
-`CountVectorizer` converts the movie tags into a bag-of-words matrix. Common English stop words are excluded, and the feature space is limited to the 10,000 most frequent terms.
-
-### 3. Similarity calculation
-
-Cosine similarity measures how closely two movie vectors point in the same direction. A higher score means the movies share more content-related terms.
-
-### 4. Recommendation ranking
-
-Similarity scores are sorted from highest to lowest, and the closest titles are returned as recommendations.
-
-## Exploratory data analysis
-
-The notebook contains visualizations that answer several useful questions:
-
-- Which genres occur most frequently?
-- How are average movie ratings distributed?
-- How has the number of releases changed over time?
-- Which movies receive the highest similarity scores for the selected title?
-
-These checks help explain the composition of the catalogue and the behavior of the recommendation model.
-
-## Dataset
-
-The dataset contains 10,000 movie records and nine original features.
-
-| Feature | Type | Description |
-| --- | --- | --- |
-| `id` | Integer | Unique movie identifier |
-| `title` | Text | Movie title |
-| `genre` | Text | Comma-separated movie genres |
-| `original_language` | Text | Original language code |
-| `overview` | Text | Short plot description |
-| `popularity` | Decimal | Popularity score |
-| `release_date` | Date | Original release date |
-| `vote_average` | Decimal | Average viewer rating |
-| `vote_count` | Integer | Number of recorded votes |
-
-## Technology stack
-
-| Technology | Role |
-| --- | --- |
-| Python | Core programming language |
-| pandas | Data loading and transformation |
-| NumPy | Numerical operations |
-| Matplotlib | Exploratory and recommendation visualizations |
-| scikit-learn | Text vectorization and cosine similarity |
-| Jupyter Notebook | Interactive analysis and documentation |
-
-## Getting started
+## 🚀 Getting Started
 
 ### Prerequisites
 
-- Python 3.10 or later
-- Git
+- Python 3.10+
 - Jupyter Notebook or JupyterLab
+- Git
 
 ### Installation
 
-1. Clone the repository.
+1. Clone the repository:
 
-   ```bash
-   git clone https://github.com/Nour-Elrouby/Movie-Recommendation-System.git
-   cd Movie-Recommendation-System
-   ```
+```bash
+git clone https://github.com/Nour-Elrouby/Movie-Recommendation-System.git
+cd Movie-Recommendation-System
+```
 
-2. Create and activate a virtual environment.
+2. Create a virtual environment:
 
-   **Windows**
+```bash
+python -m venv .venv
+```
 
-   ```powershell
-   python -m venv .venv
-   .venv\Scripts\activate
-   ```
+3. Activate the virtual environment:
 
-   **macOS or Linux**
+**Windows**
 
-   ```bash
-   python3 -m venv .venv
-   source .venv/bin/activate
-   ```
+```powershell
+.venv\Scripts\activate
+```
 
-3. Install the project dependencies.
+**macOS / Linux**
 
-   ```bash
-   python -m pip install pandas numpy matplotlib scikit-learn jupyter
-   ```
+```bash
+source .venv/bin/activate
+```
 
-4. Start Jupyter Notebook.
+4. Install the required libraries:
 
-   ```bash
-   jupyter notebook
-   ```
+```bash
+pip install pandas numpy matplotlib scikit-learn jupyter
+```
 
-5. Open `Movie_Recommendation.ipynb` and run the cells sequentially.
+5. Start Jupyter Notebook:
 
-## Usage
+```bash
+jupyter notebook
+```
 
-After running all preceding notebook cells, request recommendations by passing a movie title to the recommendation function:
+Open `Movie_Recommendation.ipynb` and run the cells from top to bottom.
+
+---
+
+## 🧠 How It Works — Recommendation Pipeline
+
+The system follows a simple content-based recommendation workflow:
+
+```text
+Movie dataset
+      ↓
+[EXPLORE]   → Inspect movie information and data quality
+      ↓
+[PREPARE]   → Combine genre and overview into tags
+      ↓
+[VECTORIZE] → Convert text into a numerical feature matrix
+      ↓
+[COMPARE]   → Calculate cosine similarity between movies
+      ↓
+[RANK]      → Sort movies by similarity score
+      ↓
+[RECOMMEND] → Return the closest matching titles
+```
+
+**Example recommendation flow:**
+
+```text
+Selected movie → "Iron Man"
+       ↓
+Find the movie index
+       ↓
+Read its cosine-similarity scores
+       ↓
+Sort scores from highest to lowest
+       ↓
+Display the top 5 related movies
+```
+
+---
+
+## 💻 Usage
+
+After running the notebook cells, pass a movie title to the recommendation function:
 
 ```python
 recommend("Iron Man")
 ```
 
-The function prints the five highest-ranked movie titles from the similarity results.
-
-## Project structure
-
-```text
-Movie-Recommendation-System/
-├── Movie_Recommendation.ipynb   # Analysis and recommendation workflow
-├── dataset.csv                  # Movie metadata
-├── README.md                    # Project documentation
-└── .gitignore                   # Excluded local files
-```
-
-## Current limitations
-
-- Recommendations are based only on genres and overview text.
-- The model does not learn individual user preferences.
-- Raw word counts do not account for the relative importance of common terms.
-- Similarity is not a prediction of whether a user will enjoy a movie.
-- Recommendation quality has not yet been evaluated against user interaction data.
-
-## Roadmap
-
-- [ ] Replace raw word counts with TF-IDF features.
-- [ ] Add cast, director, keywords, and production metadata.
-- [ ] Apply stemming or lemmatization to improve text normalization.
-- [ ] Add quantitative evaluation with ranking metrics.
-- [ ] Introduce collaborative filtering from user ratings.
-- [ ] Deploy the model through an interactive web interface.
-
-## Contributing
-
-Contributions and suggestions are welcome. To propose an improvement:
-
-1. Fork the repository.
-2. Create a feature branch.
-3. Commit your changes.
-4. Open a pull request describing the improvement.
-
-## Author
-
-**Nour El-Rouby**
-
-[![GitHub](https://img.shields.io/badge/GitHub-Nour--Elrouby-181717?logo=github)](https://github.com/Nour-Elrouby)
+The function displays the five highest-ranked recommendations.
 
 ---
 
-<div align="center">
-  Built with Python, scikit-learn, and a love for movies.
-</div>
+## 📦 Dataset
+
+The dataset contains **10,000 movie records** and nine original features:
+
+| Column | Description |
+|---|---|
+| `id` | Unique movie identifier |
+| `title` | Movie title |
+| `genre` | Comma-separated genres |
+| `original_language` | Original language code |
+| `overview` | Short plot description |
+| `popularity` | Movie popularity score |
+| `release_date` | Original release date |
+| `vote_average` | Average viewer rating |
+| `vote_count` | Number of recorded votes |
+
+---
+
+## 📈 Notebook Sections
+
+The notebook is organized into the following stages:
+
+1. **Data Understanding**
+2. **Import Libraries**
+3. **Data Exploration**
+4. **Exploratory Data Analysis**
+5. **Data Handling & Preprocessing**
+6. **Feature Extraction**
+7. **Cosine Similarity**
+8. **Recommendation Analysis**
+9. **Recommendation Function**
+
+---
+
+## 🔮 Future Improvements
+
+- Use TF-IDF to reduce the influence of common words
+- Add cast, director, keywords, and production information
+- Apply stemming or lemmatization during text preprocessing
+- Build a hybrid system with collaborative filtering
+- Evaluate recommendations with ranking metrics
+- Deploy the model as an interactive web application
+
+---
+
+## 👤 Author
+
+**Nour El-Rouby**
+
+- GitHub: [@Nour-Elrouby](https://github.com/Nour-Elrouby)
