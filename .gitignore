@@ -1,0 +1,8 @@
+# Streamlit interface files
+.streamlit/
+app.py
+requirements.txt
+
+# Python-generated files
+__pycache__/
+*.py[cod]
